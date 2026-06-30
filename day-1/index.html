@@ -14,28 +14,71 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <a href="/" aria-label="Sneaker Company Homepage Link">
-        <img src="./src/assets/images/logo.svg" alt="Sneaker Company Logo" />
+    <header class="header">
+      <button
+        class="header__btn header__btn--menu"
+        id="nav-menu-btn"
+        aria-label="Open Navigation Menu"
+      >
+        <img
+          src="./src/assets/icons/icon-menu.svg"
+          alt="Hamburger menu icon"
+          aria-hidden="true"
+        />
+      </button>
+      <a
+        class="header__logo"
+        href="/"
+        aria-label="Sneaker Company Homepage Link"
+      >
+        <img
+          class="header__img"
+          src="./src/assets/images/logo.svg"
+          alt="Sneaker Company Logo"
+        />
       </a>
-      <nav aria-label="Main Navigation">
-        <ul>
-          <li><a href="/collections">Collections</a></li>
-          <li><a href="/men">Men</a></li>
-          <li><a href="/women">Women</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+      <nav class="nav" aria-label="Main Navigation" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <button
+              class="nav__btn nav__btn--close"
+              aria-label="Close Navigation Menu"
+              id="nav-menu-close-btn"
+            >
+              <img
+                src="./src/assets/icons/icon-close.svg"
+                alt="Close icon for closing navigation menu"
+                aria-hidden="true"
+              />
+            </button>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/collections">Collections</a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="/men">Men</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="/women">Women</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/about">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/contact">Contact</a>
+          </li>
         </ul>
       </nav>
-      <div>
-        <button aria-label="Open Cart">
+      <div class="header__actions">
+        <button class="header__btn header__btn--cart" aria-label="Open Cart">
           <img
             src="./src/assets/icons/icon-cart.svg"
             alt="Cart icon for cart view button"
             aria-hidden="true"
           />
         </button>
-        <button aria-label="Account Menu">
+        <button
+          class="header__btn header__btn--avatar"
+          aria-label="Account Menu"
+        >
           <img
             src="./src/assets/images/image-avatar.png"
             alt="Your account avatar for account menu button"
@@ -47,60 +90,69 @@
     <!-- Header End -->
 
     <!-- Main Content -->
-    <main>
-      <section aria-label="Product Image Gallery">
+    <main class="main">
+      <section class="gallery" aria-label="Product Image Gallery">
         <img
+          class="gallery__img"
           src="./src/assets/images/image-product-1.jpg"
           alt="Product Image 1"
           id="product-image-main"
         />
-        <ul>
-          <li>
+        <ul class="gallery__list">
+          <li class="gallery__item">
             <button
+              class="gallery__btn"
               aria-controls="product-image-main"
               aria-label="View Product Image 1"
               aria-current="true"
             >
               <img
+                class="gallery__thumbnail"
                 src="./src/assets/images/image-product-1-thumbnail.jpg"
                 alt="Product Thumbnail 1"
                 aria-hidden="true"
               />
             </button>
           </li>
-          <li>
+          <li class="gallery__item">
             <button
+              class="gallery__btn"
               aria-controls="product-image-main"
               aria-label="View Product Image 2"
               aria-current="false"
             >
               <img
+                class="gallery__thumbnail"
                 src="./src/assets/images/image-product-2-thumbnail.jpg"
                 alt="Product Thumbnail 2"
                 aria-hidden="true"
               />
             </button>
           </li>
-          <li>
+          <li class="gallery__item">
             <button
+              class="gallery__btn"
               aria-controls="product-image-main"
               aria-label="View Product Image 3"
               aria-current="false"
             >
               <img
+                class="gallery__thumbnail"
                 src="./src/assets/images/image-product-3-thumbnail.jpg"
                 alt="Product Thumbnail 3"
                 aria-hidden="true"
               />
             </button>
           </li>
-          <li>
+          <li class="gallery__item">
             <button
+              class="gallery__btn"
               aria-controls="product-image-main"
               aria-label="View Product Image 4"
               aria-current="false"
             >
               <img
+                class="gallery__thumbnail"
                 src="./src/assets/images/image-product-4-thumbnail.jpg"
                 alt="Product Thumbnail 4"
                 aria-hidden="true"
@@ -109,40 +161,49 @@
           </li>
         </ul>
       </section>
-      <section aria-labelledby="product-title">
-        <p>Sneaker Company</p>
-        <h1 id="product-title">Fall Limited Edition Sneakers</h1>
-        <p>
+      <section class="detail" aria-labelledby="product-title">
+        <p class="detail__masthead">Sneaker Company</p>
+        <h1 class="detail__title" id="product-title">
+          Fall Limited Edition<br />
+          Sneakers
+        </h1>
+        <p class="detail__description">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
         </p>
-        <div>
-          <span>
+        <div class="price">
+          <span class="price__current">
             <span class="sr-only">Current Price</span>
             &dollar;125.00</span
           >
-          <span>
+          <span class="price__discount">
             <span class="sr-only">Discount Percentage</span>
             50&percnt;</span
           >
+          <s class="price__original">
+            <span class="sr-only">Original Price</span>
+            &dollar;250.00</s
+          >
         </div>
-        <s>
-          <span class="sr-only">Original Price</span>
-          &dollar;250.00</s
-        >
 
-        <form>
-          <div>
-            <button aria-label="Decrease quantity">
+        <form class="form">
+          <div class="form__quantity">
+            <button
+              class="form__btn form__btn--decrease"
+              aria-label="Decrease quantity"
+            >
               <img
                 src="./src/assets/icons/icon-minus.svg"
                 alt="Minus icon for decreasing quantity"
                 aria-hidden="true"
               />
             </button>
-            <span>0</span>
-            <button aria-label="Increase quantity">
+            <span class="form__quantity-value">0</span>
+            <button
+              class="form__btn form__btn--increase"
+              aria-label="Increase quantity"
+            >
               <img
                 src="./src/assets/icons/icon-plus.svg"
                 alt="Plus icon for increasing quantity"
@@ -150,9 +211,10 @@
               />
             </button>
           </div>
-          <button aria-label="Add to cart">
+          <button class="form__submit" aria-label="Add to cart">
             <img
-              src="./src/assets/icons/icon-cart.svg"
+              class="form__submit-icon"
+              src="./src/assets/icons/icon-cart-black.svg"
               alt="Cart icon for add to cart button"
               aria-hidden="true"
             />
