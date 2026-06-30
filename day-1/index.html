@@ -8,16 +8,17 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day 1</title>
   </head>
   <body>
     <!-- Header -->
     <header>
-      <a>
+      <a href="/" aria-label="Sneaker Company Homepage Link">
         <img src="./src/assets/images/logo.svg" alt="Sneaker Company Logo" />
       </a>
-      <nav>
+      <nav aria-label="Main Navigation">
         <ul>
           <li><a href="/collections">Collections</a></li>
           <li><a href="/men">Men</a></li>
@@ -27,11 +28,19 @@
         </ul>
       </nav>
       <div>
-        <button>
-          <img src="./src/assets/icons/icon-cart.svg" alt="Cart" />
+        <button aria-label="Open Cart">
+          <img
+            src="./src/assets/icons/icon-cart.svg"
+            alt="Cart icon for cart view button"
+            aria-hidden="true"
+          />
         </button>
-        <button>
-          <img src="./src/assets/images/image-avatar.png" alt="Avatar" />
+        <button aria-label="Account Menu">
+          <img
+            src="./src/assets/images/image-avatar.png"
+            alt="Your account avatar for account menu button"
+            aria-hidden="true"
+          />
         </button>
       </div>
     </header>
@@ -39,74 +48,114 @@
 
     <!-- Main Content -->
     <main>
-      <section>
-        <picture>
-          <img
-            src="./src/assets/images/image-product-1.jpg"
-            alt="Product Image 1"
-          />
-        </picture>
+      <section aria-label="Product Image Gallery">
+        <img
+          src="./src/assets/images/image-product-1.jpg"
+          alt="Product Image 1"
+          id="product-image-main"
+        />
         <ul>
           <li>
-            <button>
+            <button
+              aria-controls="product-image-main"
+              aria-label="View Product Image 1"
+              aria-current="true"
+            >
               <img
                 src="./src/assets/images/image-product-1-thumbnail.jpg"
                 alt="Product Thumbnail 1"
+                aria-hidden="true"
               />
             </button>
           </li>
           <li>
-            <button>
+            <button
+              aria-controls="product-image-main"
+              aria-label="View Product Image 2"
+              aria-current="false"
+            >
               <img
                 src="./src/assets/images/image-product-2-thumbnail.jpg"
                 alt="Product Thumbnail 2"
+                aria-hidden="true"
               />
             </button>
           </li>
           <li>
-            <button>
+            <button
+              aria-controls="product-image-main"
+              aria-label="View Product Image 3"
+              aria-current="false"
+            >
               <img
                 src="./src/assets/images/image-product-3-thumbnail.jpg"
                 alt="Product Thumbnail 3"
+                aria-hidden="true"
               />
             </button>
           </li>
           <li>
-            <button>
+            <button
+              aria-controls="product-image-main"
+              aria-label="View Product Image 4"
+              aria-current="false"
+            >
               <img
                 src="./src/assets/images/image-product-4-thumbnail.jpg"
                 alt="Product Thumbnail 4"
+                aria-hidden="true"
               />
             </button>
           </li>
         </ul>
       </section>
-      <section>
-        <h1>Sneaker Company</h1>
-        <h2>Fall Limited Edition Sneakers</h2>
+      <section aria-labelledby="product-title">
+        <p>Sneaker Company</p>
+        <h1 id="product-title">Fall Limited Edition Sneakers</h1>
         <p>
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
         </p>
         <div>
-          <span>&dollar;125.00</span>
-          <span>50&percnt;</span>
+          <span>
+            <span class="sr-only">Current Price</span>
+            &dollar;125.00</span
+          >
+          <span>
+            <span class="sr-only">Discount Percentage</span>
+            50&percnt;</span
+          >
         </div>
-        <s>&dollar;250.00</s>
+        <s>
+          <span class="sr-only">Original Price</span>
+          &dollar;250.00</s
+        >
 
         <form>
           <div>
-            <button>
-              <img src="./src/assets/icons/icon-minus.svg" alt="Minus" />
+            <button aria-label="Decrease quantity">
+              <img
+                src="./src/assets/icons/icon-minus.svg"
+                alt="Minus icon for decreasing quantity"
+                aria-hidden="true"
+              />
             </button>
             <span>0</span>
-            <button>
-              <img src="./src/assets/icons/icon-plus.svg" alt="Plus" />
+            <button aria-label="Increase quantity">
+              <img
+                src="./src/assets/icons/icon-plus.svg"
+                alt="Plus icon for increasing quantity"
+                aria-hidden="true"
+              />
             </button>
           </div>
-          <button>
-            <img src="./src/assets/icons/icon-cart.svg" alt="" />
+          <button aria-label="Add to cart">
+            <img
+              src="./src/assets/icons/icon-cart.svg"
+              alt="Cart icon for add to cart button"
+              aria-hidden="true"
+            />
             Add to cart
           </button>
         </form>
