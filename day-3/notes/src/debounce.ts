@@ -4,7 +4,7 @@ export function debounce<T extends (...args: any[]) => void>(
 ) {
   let timeoutId: ReturnType<typeof setTimeout> | null = null;
 
-  return (...args: any[]) => {
+  return (...args: Parameters<T>) => {
     timeoutId && clearTimeout(timeoutId);
 
     timeoutId = setTimeout(() => {
