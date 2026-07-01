@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resize Observer Practice</title>
+    <link rel="stylesheet" href="./src/resize-observer-style.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside id="sidebar" class="sidebar">
+        <div class="menu-item">
+          <span class="icon">📊</span>
+          <span class="text">Dashboard</span>
+        </div>
+        <div class="menu-item">
+          <span class="icon">⚙️</span>
+          <span class="text">Settings</span>
+        </div>
+        <div class="menu-item">
+          <span class="icon">👤</span>
+          <span class="text">Profile</span>
+        </div>
+        <div class="resize-handle-hint">Drag edge to resize ➡️</div>
+      </aside>
+
+      <main class="main-content">
+        <h1>Dashboard Overview</h1>
+        <p>
+          Drag the edge of the sidebar left and right to see the ResizeObserver
+          in action!
+        </p>
+
+        <div id="data-card" class="data-card">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+            alt="Data Visualization"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h2>Weekly Statistics</h2>
+            <p>
+              This card normally stacks vertically. But if its container expands
+              beyond 500px, it switches to a side-by-side layout.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./src/resize-observer.ts"></script>
+  </body>
+</html>
