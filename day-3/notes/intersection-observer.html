@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intersection Observer Practice</title>
+    <link rel="stylesheet" href="./src/intersection-style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Intersection Observer Playground</h1>
+      <p>Scroll down to see the magic happen.</p>
+    </header>
+
+    <main>
+      <section id="animations-section">
+        <h2>Task 1: Scroll Animations</h2>
+        <div class="content-block">Content Block 1</div>
+        <div class="content-block">Content Block 2</div>
+        <div class="content-block">Content Block 3</div>
+        <div class="content-block">Content Block 4</div>
+        <div class="content-block">Content Block 5</div>
+      </section>
+
+      <section id="lazy-load-section">
+        <h2>Task 2: Lazy Loading</h2>
+        <div class="image-grid">
+          <img
+            src="https://placeholder.pics/svg/300"
+            data-src="https://images.unsplash.com/photo-1782332576258-bcde16561e68?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Nature 1"
+            class="lazy-image"
+          />
+          <img
+            src="https://placeholder.pics/svg/300"
+            data-src="https://plus.unsplash.com/premium_photo-1781441451371-046d18fc1076?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Nature 2"
+            class="lazy-image"
+          />
+          <img
+            src="https://placeholder.pics/svg/300"
+            data-src="https://images.unsplash.com/photo-1781376621620-02e8e6b83399?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Nature 3"
+            class="lazy-image"
+          />
+          <img
+            src="https://placeholder.pics/svg/300"
+            data-src="https://images.unsplash.com/photo-1780914436209-d19620bc82a5?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Nature 4"
+            class="lazy-image"
+          />
+        </div>
+      </section>
+
+      <section id="infinite-scroll-section">
+        <h2>Task 3: Infinite Scroll Container</h2>
+        <div id="feed-container"></div>
+
+        <div id="load-more" class="loader">Loading more content...</div>
+      </section>
+    </main>
+
+    <script src="./src/intersection-observer.ts"></script>
+  </body>
+</html>
