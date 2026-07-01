@@ -1,0 +1,55 @@
+@use "../../theme/variables" as *;
+@use "../../theme/mixins" as *;
+
+.gallery {
+  @include mq(md) {
+    flex: 1 1 50%;
+    padding-inline: 1.2em;
+  }
+}
+
+.img {
+  max-width: 100%;
+  display: block;
+
+  @include mq(md) {
+    border-radius: 0.5em;
+    overflow: hidden;
+  }
+}
+
+.list {
+  display: none;
+
+  @include mq(md) {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    gap: 1em;
+    margin-top: 1.5em;
+  }
+}
+
+.item {
+  @include mq(md) {
+    flex: 1 1 auto;
+  }
+}
+
+.btn {
+  @include mq(md) {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
+    border-radius: 0.5em;
+    overflow: hidden;
+  }
+}
+
+.thumbnail {
+  max-width: 100%;
+  display: block;
+}

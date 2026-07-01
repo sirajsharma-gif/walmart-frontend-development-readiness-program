@@ -1,0 +1,84 @@
+@use "../../theme/variables" as *;
+@use "../../theme/mixins" as *;
+@use "../../theme/functions" as *;
+
+.form {
+  @include mq(md) {
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+  }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  background-color: clr(neutral, light-grayish-blue);
+  border-radius: 0.5em;
+  overflow: hidden;
+  margin-top: 1em;
+
+  @include mq(md) {
+    flex: 1 1 auto;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  min-height: -webkit-fill-available;
+  border: none;
+  cursor: pointer;
+  padding: 1.2em;
+  flex: 1 1 auto;
+}
+
+.btnDecrease {
+  @extend .btn;
+  justify-content: flex-start;
+}
+
+.btnIncrease {
+  @extend .btn;
+  justify-content: flex-end;
+}
+
+.quantityValue {
+  text-align: center;
+  font-weight: 700;
+  color: clr(neutral, very-dark-blue);
+  width: 2em;
+}
+
+.submit {
+  width: 100%;
+  background-color: clr(primary, base);
+  color: clr(black);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  border: none;
+  border-radius: 0.5em;
+  padding-block: 1em;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @include mq(md) {
+    width: auto;
+    padding-inline: 4.5em;
+  }
+}
+
+.submitIcon {
+  width: 1.2em;
+  height: 1.2em;
+}

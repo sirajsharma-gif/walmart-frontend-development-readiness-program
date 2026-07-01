@@ -1,0 +1,10 @@
+@use "sass:map";
+
+@use "variables" as *;
+
+@function clr($color, $tone: null) {
+  @if ($tone) {
+    @return map.get(map.get($colors, $color), $tone);
+  }
+  @return map.get($colors, $color);
+}

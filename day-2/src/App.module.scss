@@ -1,0 +1,13 @@
+@use "./theme/variables" as *;
+@use "./theme/mixins" as *;
+
+.main {
+  @include mq(md) {
+    display: flex;
+    flex: 1 1 auto;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+  }
+}
