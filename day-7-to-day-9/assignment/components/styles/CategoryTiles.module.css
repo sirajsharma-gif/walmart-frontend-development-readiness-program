@@ -1,0 +1,27 @@
+/* ---------- category tiles (component: CategoryTile) ---------- */
+
+.categoryTiles {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+.categoryTile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  text-align: center;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 14px;
+}
+.categoryTile:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+.categoryTile .img-ph {
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+}

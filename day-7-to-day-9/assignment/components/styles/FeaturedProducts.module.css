@@ -1,0 +1,71 @@
+/* ---------- cards & product grid (component: ProductCard) ---------- */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.productGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+.productCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    box-shadow 0.15s,
+    transform 0.15s;
+}
+.productCard:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+.productCard .img-ph {
+  aspect-ratio: 4 / 3;
+}
+.productCardBody {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.productCardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.productCardTitle a {
+  color: var(--ink);
+}
+.rating {
+  font-size: 12px;
+  color: var(--warn-ink);
+  letter-spacing: 1px;
+}
+.rating .muted {
+  letter-spacing: 0;
+}
+.price {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+.priceOld {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: line-through;
+  margin-left: 6px;
+}
+.productCard .btn {
+  margin-top: auto;
+}

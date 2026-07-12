@@ -1,0 +1,77 @@
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 60px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.mainNav {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.mainNav a {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.mainNav a[aria-current="page"] {
+  color: var(--accent);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.cartLink {
+  position: relative;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.cartCount {
+  /* client-side island: hydrate from cart store */
+  display: inline-block;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  margin-left: 4px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  font-family: var(--font-mono);
+}
