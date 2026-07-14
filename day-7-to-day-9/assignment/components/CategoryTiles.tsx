@@ -1,8 +1,15 @@
 import { FC } from "react";
 
-import styles from "./styles/CategoryTiles.module.css";
+import { TCategory } from "../models/category";
 
-export const CategoryTiles: FC = () => {
+import styles from "./styles/CategoryTiles.module.css";
+import Link from "next/link";
+
+type CategoryTileProps = {
+  categories: TCategory[];
+};
+
+export const CategoryTiles: FC<CategoryTileProps> = ({ categories }) => {
   return (
     <section className="section">
       <div className="section-head">
@@ -10,30 +17,16 @@ export const CategoryTiles: FC = () => {
       </div>
       <div className={styles.categoryTiles}>
         {/* component: CategoryTile — repeat per category  */}
-        <a className={styles.categoryTile} href="category.html">
-          <div className="img-ph">IMG</div>
-          Smartphones
-        </a>
-        <a className={styles.categoryTile} href="category.html">
-          <div className="img-ph">IMG</div>
-          Laptops
-        </a>
-        <a className={styles.categoryTile} href="category.html">
-          <div className="img-ph">IMG</div>
-          Audio
-        </a>
-        <a className={styles.categoryTile} href="category.html">
-          <div className="img-ph">IMG</div>
-          Monitors
-        </a>
-        <a className={styles.categoryTile} href="category.html">
-          <div className="img-ph">IMG</div>
-          Smart home
-        </a>
-        <a className={styles.categoryTile} href="category.html">
-          <div className="img-ph">IMG</div>
-          Accessories
-        </a>
+        {categories.map((category) => (
+          <Link
+            className={styles.categoryTile}
+            href={`/category/electronics/${category.id}`}
+            key={category.id}
+          >
+            <div className="img-ph">IMG</div>
+            {category.label}
+          </Link>
+        ))}
       </div>
     </section>
   );

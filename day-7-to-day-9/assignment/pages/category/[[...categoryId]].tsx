@@ -1,12 +1,13 @@
 import { NextPage } from "next";
+import Link from "next/link";
 
 const CategoryPage: NextPage = () => {
   return (
     <main className="container">
       {/* route: /category/[...slug] — breadcrumb depth mirrors params.slug array */}
       <nav className="breadcrumb">
-        <a href="index.html">Home</a> / <a href="category.html">Electronics</a>{" "}
-        / <span aria-current="page">Smartphones</span>
+        <Link href="/">Home</Link> / <a href="category.html">Electronics</a> /{" "}
+        <span aria-current="page">Smartphones</span>
       </nav>
 
       <div className="page-head">

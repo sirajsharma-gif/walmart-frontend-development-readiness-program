@@ -1,5 +1,7 @@
 import { FC } from "react";
 
+import Link from "next/link";
+
 import styles from "./styles/SiteHeader.module.css";
 
 export const Hero: FC = () => {
@@ -12,9 +14,9 @@ export const Hero: FC = () => {
           Laptops, audio, smart home and more — restocked hourly. Prices you can
           trust because this page revalidates itself.
         </p>
-        <a className="btn btn-primary" href="products.html?sort=price-asc">
+        <Link className="btn btn-primary" href="/products?sort=price-asc">
           Shop deals
-        </a>
+        </Link>
       </div>
       <div className="img-ph">HERO 4:3</div>
     </section>

@@ -1,0 +1,40 @@
+{
+  "categories": [
+    { "label": "Smartphones", "id": "smartphones", "imageUrl": "url" },
+    { "label": "Laptops", "id": "laptops", "imageUrl": "url" },
+    { "label": "Audio", "id": "audio", "imageUrl": "url" },
+    { "label": "Monitors", "id": "monitor", "imageUrl": "url" },
+    { "label": "Smart home", "id": "smartHome", "imageUrl": "url" },
+    { "label": "Accessories", "id": "accessories", "imageUrl": "url" }
+  ],
+  "featuredProducts": [
+    {
+      "id": "1",
+      "name": "iPhone 9 — 64GB",
+      "rating": 4.6,
+      "price": 549.0,
+      "imageUrl": "url"
+    },
+    {
+      "id": "2",
+      "name": "MacBook Pro 14\"",
+      "rating": 4.9,
+      "price": 1749.0,
+      "imageUrl": "url"
+    },
+    {
+      "id": "3",
+      "name": "Sony WH-1000XM5",
+      "rating": 4.7,
+      "price": 329.0,
+      "imageUrl": "url"
+    },
+    {
+      "id": "4",
+      "name": "Samsung 49\" Odyssey",
+      "rating": 4.5,
+      "price": 899.0,
+      "imageUrl": "url"
+    }
+  ]
+}
